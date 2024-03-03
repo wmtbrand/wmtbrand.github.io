@@ -1,0 +1,82 @@
+
+.rpsTitle {
+    color: var(--orange);
+    font-size: 1.5em;
+}
+
+.scoreBox {
+    display: flex;
+    justify-content: space-between;
+    max-width: 12em;
+}
+
+.scoreLabel {
+    color: var(--blue);
+    font-size: 1.25em;
+}
+
+.scoreNum {
+    font-size: 1.25em;
+    padding-left: 1em;
+}
+
+#scoreboard {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2em;
+}
+
+#scores {
+    padding-left: 40px;
+    padding-top: 10px;
+}
+
+#choiceTitle {
+    margin-top: 2em;
+}
+
+#rpsChoices {
+    display: flex;
+    font-size: 1.5em;
+    justify-content: space-between;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+
+#rpsFeedback {
+    min-height: 6em;
+    background-color: transparent;
+    border-width: 1px;
+    border-color: var(--blue);
+    color: var(--white);
+    opacity: 0.5;
+}
+
+#rpsFeedback::-webkit-scrollbar {
+    width: 4px;
+}
+
+#rpsFeedback::-webkit-scrollbar-thumb {
+    background-color: rgba(242,143,59,0.75);
+}
+
+#rpsResult {
+    margin-top: 1em;
+    text-align: center;
+    color: var(--orange);
+    font-size: 2em;
+}
+
+#resetBtn {
+    visibility: hidden;
+}
+
+
+@media(min-width: 950px) {
+    .centerPane {
+        padding-left: 150px;
+        padding-right: 140px;
+    }
+}

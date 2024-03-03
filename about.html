@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <link rel="stylesheet" href="style/main.css">
+  <!-- Import Google Fonts for CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Jura:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Fjord+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <main class="main">
+    <div class="leftPane">
+      <!--Left Pane for empty space or navigation bar-->
+      <img id="aboutPicture" src="images/miniprofile.jpg" onclick="showFullImage()">
+    </div>
+    <div class="article-window">
+      <article>
+        <div id="aboutHeader">
+          <div class="heading">
+            About:
+          </div>
+          
+        </div>
+		    <p>
+            Growing up, I was always fascinated with technology. Then, in high school 
+            I had the opportunity to learn the fundamentals of computer programming, 
+            starting with C++ and Java. After graduating, I decided to pursue a career 
+            in Information Technology, so I enrolled in a technical college. Over the 
+            next two years I earned my Associate degree in Computer Support and 
+            Networking.
+        </p>
+        <p>
+            In 2013, I was hired by the University of Georgia as the IT helpdesk manager 
+            for the Facilities Management Division. For the next two years I managed the 
+            physical computers, began automating processes with PowerShell, and learned 
+            how to maintain our layer-2 network and small VDI environment. Then, in 2015 
+            I had the opportunity to move into system administration and continue refining 
+            my skills. Since then, I have built up the VDI environment that now services 
+            roughly 800 employees for our division, streamlined computer deployments and 
+            automated other tasks, managed the layer-2 network for our buildings, and 
+            deployed and maintained Palo Alto firewalls to protect our datacenters. 
+            Additionally, I spent two years working with Access Control supporting the 
+            access control, video monitoring, and related back-end systems for the 
+            university.
+        </p>
+        <p>
+            Currently, I am also working on obtaining my Bachelor of Information Technology 
+            online at Kennesaw State University. My current course work includes web 
+            development and hardware & software concepts. I have also completed courses 
+            covering Python, C#, and pre-calculus, and have a 4.0 Institutional GPA. My goal
+            after graduation is to move into a higher leadership role as an IT Director
+            leveraging my experience to guide and inspire a successful team.
+        </p>
+        <p>
+            When I&apos;m not staring at firewall logs, optimizing VDI login times, or taking 
+            online classes, I enjoy dreaming of having the time to play video games. Speaking
+            of games, would you like to play <a href="rps.html">Rock, Paper, Scissors</a>?
+        </p>
+        <!-- Define a picture frame that will be absolute positioned for loading the full profile picture -->
+        <!-- This picture frame will be hidden until the mini profile picture is clicked -->
+        <div id="fullPictureFrame">
+          <img id="fullPicture" src="images/profile.jpg" onclick="hideFullImage()">
+        </div>
+      </article>
+    </div>
+    <div class="rightPane">
+      <!--Right pane for empty space or aside content-->
+    </div>
+    <!-- Define the div that will be absolute positioned to fill the entire window, hidden by default -->
+    <!-- This will be used as an opacity filter for when the full profile picture is visible -->
+    <div id="fullPictureBackground"  onclick="hideFullImage()"></div>
+  </main>
+  <script src="scripts/index.js"></script>
+</body>
+</html>

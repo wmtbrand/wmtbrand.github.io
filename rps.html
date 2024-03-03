@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock. Paper. Scissors.</title>
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="style/rps.css">
+  <!-- Import Google Fonts for CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Jura:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Fjord+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="main">
+    <div class="leftPane">
+      <!--Left Pane for empty space or navigation bar-->
+    </div>
+    <div class="centerPane">
+      <div class="heading">Let&apos;s Play Rock, Paper, Scissors</div>
+      <div class="headerSubtitle">Best Two Out of Three</div>
+      <div id="scoreboard">
+        <div class="rpsTitle">Scoreboard:</div>
+        <div id="scores">
+          <div id="playerInfo" class="scoreBox">
+            <div class="scoreLabel">Player:</div>
+            <label id="playerScore" class="scoreNum">0</label>
+          </div>
+          <div id="computerInfo"  class="scoreBox">
+            <div class="scoreLabel">Computer:</div>
+            <label id="computerScore" class="scoreNum">0</label>
+          </div>
+        </div>
+      </div>
+      <div id="choiceTitle" class="rpsTitle">Choose an Option:</div>
+      <div id="rpsChoices">
+        <input type="button" value="Rock" onclick="play(-1)">
+        <input type="button" value="Paper" onclick="play(0)">
+        <input type="button" value="Scissors" onclick="play(1)">
+      </div>
+      <div></div>
+      <textarea id="rpsFeedback"></textarea>
+      <div id="rpsResult"></div>
+      <input type="button" value="Play Again?" id="resetBtn" onclick="reset()">
+    </div>
+    <div class="rightPane">
+      <!--Right pane for empty space or aside content-->
+    </div>
+  </main>
+  <!-- This is where the magic happens -->
+  <script src="scripts/rps.js"></script>
+</body>
+</html>

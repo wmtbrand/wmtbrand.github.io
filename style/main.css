@@ -1,0 +1,431 @@
+/* color definitions for theme */
+:root {
+    --grey: #35393c;
+    --lightgrey: #878e99;
+    --white: #fffbfc;
+    --blue: #24f8ff;
+    --orange: #f28f3b;
+    /* orange rgb: 242, 143, 59 */  
+}
+
+
+/* HTML Tag Sytles */
+a {
+    text-decoration: none;
+    color: var(--blue);
+}
+
+a:hover {
+    color: var(--orange);
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+article {
+    max-width: 35em;  /* Was set to 50 with centered view */
+    position: relative;
+}
+
+body {
+    font-family: "Jura", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--white);
+    margin: 0px;
+}
+
+body::-webkit-scrollbar {
+    width: 4px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(242,143,59,0.75);
+}
+
+iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+input[type=button] {
+    font-family: "Jura", sans-serif;
+    text-decoration: none;
+    color: var(--blue);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+}
+
+input[type=button]:hover {
+    color: var(--orange);
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+
+/* Header Element Classes */
+.header {
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 70px;
+    background-color: rgba(0,0,0,0.0);
+}
+
+.headerLeft {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    
+}
+
+.headerCenter {
+    display: inline-block;
+    flex: 1.5;
+}
+
+.headerRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.headerSubtitle {
+    color: var(--orange);
+    font-size: 0.75em;
+}
+
+
+/* Footer Element Classes */
+.footer {
+    display: flex;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 70px;
+    font-size: 0.75em;
+    z-index: 100;
+    color: var(--lightgrey);
+    background-color: rgba(0,0,0,0.0);
+}
+
+.footerLeft {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-left: 1em;
+    padding-bottom: 1em;
+}
+
+.footerCenter {
+    flex: 1.5;
+}
+
+.footerRight {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    text-align: right;
+    padding-right: 1em;
+    padding-bottom: 1em;
+}
+
+
+/* General Classes */
+.article-window {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: left;
+    border-color: orange;
+    padding-bottom: 50px;
+}
+
+.backgroundColor {
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: -2;
+}
+
+.backgroundImage {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-image: url("../images/background-2-large-NASA.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position-y: 100px;
+    z-index: -1;
+    opacity: 1;
+}
+
+.heading {
+    font-family: OstrichBold;
+    font-feature-settings: "kern";
+    font-size: 2em;
+    background: -webkit-linear-gradient(var(--blue), var(--orange));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.horizontal-nav {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.centerPane {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.leftPane {
+    position: relative;
+}
+
+.rightPane {
+    position: relative;
+}
+
+.main {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    font-size: 1em;
+    min-height: 200px;
+}
+
+.main-window {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 70px;
+    bottom: 70px;
+    left: 0px;
+    right: 0px;
+}
+
+.relative {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+/* Contact Form Classes */
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 50px;
+    background-color: black;
+    background-color: transparent;
+    border-radius: 18px;
+    border-color: var(--blue);
+    border-style: solid;
+    border-width: 1px;
+}
+
+.contactBackground {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+    max-width: 700px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 50px;
+    border-radius: 18px;
+    background-color: black;
+    opacity: 0.7;
+}
+
+.contactTextbox {
+    margin-top: 1em;
+    font-size: 1.5em;
+    background-color: transparent;
+    border-color: var(--blue);
+    border-radius: 8px;
+    font-family: "Jura", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--white);
+}
+
+.contactTextbox::placeholder {
+    color: var(--grey);
+    padding-left: 0.5em;
+}
+
+.contactSubmit {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    max-width: 12em;
+    background-color: transparent;
+    font-family: "Jura", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--blue);
+    font-size: 1.5em;
+    border-style: none;
+    align-self: end;
+}
+
+.contactSubmit:hover {
+    color: var(--orange);
+    border-color: var(--blue);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+
+/* ID Styles */
+#aboutHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+#aboutPicture {
+    position: absolute;
+    width: 200px;
+    border-radius: 100px;
+    top: 100px;
+    left: 200px;
+}
+
+#contactMessage {
+    height: 8em;
+    resize: none;
+}
+
+#contactMessage::-webkit-scrollbar {
+    width: 8px;
+}
+
+#contactMessage::-webkit-scrollbar-thumb {
+    background-color: rgba(242,143,59,0.75);
+}
+
+#fullPicture {
+    position: relative;
+    margin-left:auto;
+    margin-right: auto;
+    height: 80%;
+    z-index: 2;
+    visibility: hidden;
+    pointer-events: visible;
+}
+
+#fullPictureBackground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: black;
+    opacity: 0.45;
+    visibility: hidden;
+    pointer-events: visible;
+}
+
+#fullPictureFrame {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    pointer-events: none;
+}
+
+#information {
+    padding-top: 2em;
+    padding-left: 2em;
+    max-width: 475px;
+    border-radius: 8px;
+}
+
+#introduction {
+    margin-top: 2em;
+}
+
+/* RESPONSIVE DESIGN */
+@media(max-width: 740px) {
+    .headerCenter {
+        flex: 0;
+    }
+
+    .footerCenter {
+        flex: 0;
+    }
+
+    #introduction {
+        max-width: 160px;
+        padding-left: 1em;
+        text-indent: -1em;
+    }
+
+    .contactForm {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .contactTextbox {
+        font-size: 1em;
+    }
+
+    .contactSubmit {
+        font-size: 1em;
+    }
+}
+
+@media(max-width: 1100px) {
+    #aboutPicture {
+        visibility: hidden;
+    }
+}
+
+@media(max-width: 1380px) {
+    #aboutPicture {
+        left: 50px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .headerCenter {
+        flex: 2.5;
+    }
+
+    .footerCenter {
+        flex: 2.5;
+    }
+}
+
+
+/* Fonts */
+@font-face {
+    font-family: OstrichBold;
+    src: url('../fonts/ostrich-sans-bold.woff');
+    font-style: normal;
+}
