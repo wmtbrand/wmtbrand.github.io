@@ -1,0 +1,22 @@
+{
+  "name": "wmtbrand.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wmtbrand/wmtbrand.github.io.git"
+  },
+  "author": "Trent Brand",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wmtbrand/wmtbrand.github.io/issues"
+  },
+  "homepage": "https://github.com/wmtbrand/wmtbrand.github.io#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

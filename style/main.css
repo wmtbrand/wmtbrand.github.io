@@ -24,6 +24,10 @@ a:hover {
 article {
     max-width: 35em;  /* Was set to 50 with centered view */
     position: relative;
+    /*
+    padding-left: 2em;
+    padding-right: 2em;
+    */
 }
 
 body {
@@ -148,6 +152,7 @@ input[type=button]:hover {
     align-items: left;
     border-color: orange;
     padding-bottom: 50px;
+    padding-top: 6em;
 }
 
 .backgroundColor {
@@ -198,24 +203,33 @@ input[type=button]:hover {
 }
 
 .leftPane {
+    /*background-color: orange;*/
+    display: flex;
+    flex-direction: column;
     position: relative;
+    padding-left: 5px;
+    padding-right: 5px;
+    align-items: center;
 }
 
 .rightPane {
-    position: relative;
+    /*background-color: orange;*/
 }
 
 .main {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-columns: 0.5fr 1fr 1.5fr;
     font-size: 1em;
     min-height: 200px;
+    height: 100%;
 }
 
 .main-window {
+    /*
     display: flex;
     flex-direction: row;
+    */
     position: absolute;
     top: 70px;
     bottom: 70px;
@@ -308,16 +322,19 @@ input[type=button]:hover {
 }
 
 #aboutPicture {
-    position: absolute;
-    width: 200px;
-    border-radius: 100px;
-    top: 100px;
-    left: 200px;
+    position: relative;
+    width: 80%;
+    border-radius: 50%;
+    top: 8em;
+    /*left: 200px;*/
+    box-shadow: 0 0 18px 8px black inset;
+
 }
 
 #contactMessage {
     height: 8em;
     resize: none;
+    font-size: 0.75em;
 }
 
 #contactMessage::-webkit-scrollbar {
@@ -330,8 +347,7 @@ input[type=button]:hover {
 
 #fullPicture {
     position: relative;
-    margin-left:auto;
-    margin-right: auto;
+    margin: auto;
     height: 80%;
     z-index: 2;
     visibility: hidden;
@@ -344,7 +360,7 @@ input[type=button]:hover {
     height: 100%;
     z-index: 1;
     background-color: black;
-    opacity: 0.45;
+    opacity: 0.65;
     visibility: hidden;
     pointer-events: visible;
 }
@@ -371,6 +387,57 @@ input[type=button]:hover {
 }
 
 /* RESPONSIVE DESIGN */
+@media(max-width: 550px) {
+    .main {
+       /* grid-template-columns: 0.25fr 4fr 0.25fr;
+       */
+       grid-template-columns: 0fr 1fr 0fr;
+    }
+
+    .leftPane {
+        padding: 0em;
+    }
+
+    .rightPane {
+        padding: 0em;
+    }
+
+    .article-window {
+        font-size: 0.75em;
+        max-width: 480px;
+    }
+
+    .centerPane {
+        font-size: 0.75em;
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+
+    #introduction {
+        text-indent: 0em;
+        max-width: 140px;
+    }
+
+    #aboutPicture {
+        visibility: hidden;
+    }
+
+    
+    article {
+       max-width: 20em;
+    }
+    /**/
+}
+
+
+@media(min-width: 551px) and (max-width: 740px) {
+    #introduction {
+        max-width: 160px;
+        padding-left: 1em;
+        text-indent: -1em;
+    }
+}
+
 @media(max-width: 740px) {
     .headerCenter {
         flex: 0;
@@ -380,11 +447,7 @@ input[type=button]:hover {
         flex: 0;
     }
 
-    #introduction {
-        max-width: 160px;
-        padding-left: 1em;
-        text-indent: -1em;
-    }
+    
 
     .contactForm {
         padding-left: 25px;
@@ -400,15 +463,33 @@ input[type=button]:hover {
     }
 }
 
+@media(min-width: 551px) and (max-width: 1000px) {
+    .main {
+        grid-template-columns: 0.5fr 2fr 0fr;
+    }
+    .leftPane {
+        padding-right: 2em;
+    }
+    .rightPane {
+        padding-left: 2em;
+    }
+}
+
 @media(max-width: 1100px) {
     #aboutPicture {
-        visibility: hidden;
+        /*visibility: hidden;*/
+    }
+}
+
+@media(1000px < width <= 1300px) {
+    .main {
+        grid-template-columns: 0.5fr 1fr 1fr;
     }
 }
 
 @media(max-width: 1380px) {
     #aboutPicture {
-        left: 50px;
+        /*left: 50px;*/
     }
 }
 

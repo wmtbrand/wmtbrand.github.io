@@ -17,6 +17,7 @@
   <!-- These will be absolute positioned to fill the entire background -->
   <div id="bgImage" class="backgroundImage"></div>
   <div class="backgroundColor"></div>
+  <!-- Header at the top of the page for logo and navigation -->
   <header class="header">
     <div class="headerLeft">
       <div class="heading">
@@ -39,10 +40,11 @@
   </header>
   <main class="main-window">
     <!-- Define the iFrame that will load the content for the portfolio pages -->
-    <iframe id="mainIframe" src="home.html" title="Home" class="frame">
+    <iframe id="mainIframe" src="home.html" title="Home">
 
     </iframe>
   </main>
+  <!-- Footer at the bottom of the page for last updated date and credits -->
   <footer class="footer">
     <div class="footerLeft">
       <!--Left side of footer - Will use for update history-->
@@ -57,6 +59,14 @@
       <div>Fonts Used: <a href="https://www.theleagueofmoveabletype.com/ostrich-sans">Ostirch</a>. <a href="https://fonts.google.com/specimen/Jura">Jura</a>.</div>
     </div>
   </footer>
+  <!-- Define a picture frame that will be absolute positioned for loading the full profile picture -->
+  <!-- This picture frame will be hidden until the mini profile picture is clicked -->
+  <div id="fullPictureFrame">
+    <img id="fullPicture" src="" onclick="hideFullImage()">
+  </div>
+  <!-- Define the div that will be absolute positioned to fill the entire window, hidden by default -->
+  <!-- This will be used as an opacity filter for when the full profile picture is visible -->
+  <div id="fullPictureBackground"  onclick="hideFullImage()"></div>
   <script src="scripts/index.js"></script>
 </body>
 </html>
